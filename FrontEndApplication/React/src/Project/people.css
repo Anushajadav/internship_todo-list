@@ -1,0 +1,14 @@
+ul li{
+        list-style-type:none;
+         width:250px;
+         height:auto;
+         margin:2px auto;
+         border-radius: 5px;
+         align-content:left;
+         border: 5px groove lightslategrey;
+        background-color:lightgrey;
+         color:black;
+         text-align:center;
+}
+
+

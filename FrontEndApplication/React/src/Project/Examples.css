@@ -1,0 +1,48 @@
+
+
+.accordion {
+  background-color:salmon;
+  color: #444;
+  cursor: pointer;
+  padding: 20px;
+  width: 100%;
+  text-align: left;
+  border: solid;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: lightsalmon;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: #FFF8DC;
+  display: none;
+  /* overflow: hidden; */
+  overflow: scroll
+}
+.idiot{
+    text-align: center;
+    align-content:center;
+    padding:25px;
+    color:palevioletred;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.guard {
+
+         width:500px;
+         height:auto;
+         margin:20px auto;
+         border: 5px groove lightgrey ;
+         padding :25px;
+         border-radius: 2em;
+         align-content:center;
+         list-style:none;
+}
+

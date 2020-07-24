@@ -1,0 +1,176 @@
+/*#top, #bottom, #left, #right {
+	background: #a5ebff;
+	position: fixed;
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 15px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 15px;
+		}
+		#top { top: 0; }
+        #bottom { bottom: 0; }*/
+ @media 
+
+/* Fairly small screens including iphones */
+only screen and (max-width: 500px),
+
+/* iPads */
+only screen and (min-device-width: 768px) and (max-device-width: 1024px) 
+
+{
+	#top, #bottom, #left, #right { display: none; }
+}
+.ex1{
+    color: #038cfc;
+    text-align:justify;
+    font-size: 22px;
+    font-weight: bold;
+    padding:100px
+}
+    
+.fa-check-square{
+    
+    color: #038cfc;
+    padding-top: 25px ;
+    text-align: center;
+}
+.center {
+
+         width:500px;
+         height:auto;
+         margin:20px auto;
+         border: 5px groove lightgrey ;
+         padding :25px;
+         border-radius: 2em;
+         align-content:center;
+}
+.ex2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.ex3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+#to-do-form input{
+  background-color:rgb(27,112,137);
+  border: 0;
+  width:250px;
+  height:50px;
+  padding:0 20px;
+  font-size:18px;
+  margin:20px;
+  color:white;
+ border-radius: 5px;
+}
+#to-do-form button{
+  height:25px;
+  width:100px;
+  border-radius: 5px;
+  border:0;
+  background-color:lightgrey;
+  cursor: pointer;
+  font-weight:bolder;
+  color:black;
+  text-align:center;
+}
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+}
+.leep{
+  height:25px;
+  width:100px;
+  border-radius: 5px;
+  border:0;
+  background-color:gray;
+  cursor: pointer;
+  font-weight:bolder;
+  color:black;
+  text-align:center;
+
+}
+
+.p.test1 {
+  text-align: right;
+  background-color:lightsalmon;
+  white-space: nowrap;
+  width: 200px;
+  border: 1px solid #000000;
+
+}
+
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+/* Popup box BEGIN */
+
+.alert{
+position: absolute; 
+bottom: 0; 
+right: 0; 
+width: 100px; 
+text-align:center;
+color:green;
+background-color: sandybrown;
+}

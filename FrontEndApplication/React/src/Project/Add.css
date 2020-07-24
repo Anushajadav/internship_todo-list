@@ -1,0 +1,113 @@
+.fa-check-square{
+    
+    color: #038cfc;
+    padding-top: 25px ;
+    text-align: center;
+}
+.ex1{
+    color: #038cfc;
+    text-align:justify;
+    font-size: 22px;
+    font-weight: bold;
+    padding:100px
+}
+
+.ex2 {
+
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color:black;
+}
+
+.guard {
+         width:500px;
+         height:auto;
+         margin:20px auto;
+         border: 5px groove blue;
+         padding :25px;
+         border-radius:15px;
+         align-content:center;
+         background-color:lightblue;
+         opacity: 0.9;
+         color:black;
+}
+
+.input{
+  background-color:white;
+  border: 0;
+  width:300px;
+  height:50px;
+  padding:0 20px;
+  font-size:18px;
+  margin:20px;
+  color:black;
+ border-radius: 5px;
+}
+
+
+
+.accordion {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+}
+
+.accordion__item + .accordion__item {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.accordion__button {
+    background-color:#038cfc;
+    color: #f4f4f4;
+    cursor: pointer;
+    padding: 18px;
+    width: 90%;
+    text-align: left;
+    border: none;
+    font-weight: bold;
+}
+
+.accordion__button:hover {
+    background-color: #0000CD;
+}
+
+.accordion__button:before {
+    display: inline-block;
+    content: '';
+    height: 10px;
+    width: 10px;
+    margin-right: 12px;
+    border-bottom: 2px solid currentColor;
+    border-right: 2px solid currentColor;
+    transform: rotate(-45deg);
+}
+
+.accordion__button[aria-expanded='true']::before,
+.accordion__button[aria-selected='true']::before {
+    transform: rotate(45deg);
+}
+
+[hidden] {
+    display: none;
+}
+
+.accordion__panel {
+    padding: 20px;
+    animation: fadein 0.35s ease-in;
+}
+
+/* -------------------------------------------------- */
+/* ---------------- Animation part ------------------ */
+/* -------------------------------------------------- */
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    90% {
+        opacity: 1;
+    }
+}
+
+ 

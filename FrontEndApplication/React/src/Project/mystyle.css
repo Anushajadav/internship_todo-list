@@ -1,0 +1,178 @@
+
+
+.tree {
+  border: 6px solid #cccccc;
+  background-color: #99FF99;
+}
+.yoga{
+  background-color:#CCFFFF;
+}
+
+.hello {
+ 
+  width: 50%;
+  border: 15px solid green;
+  background-color: lavender;
+  height:auto;
+  margin: 0;
+}
+.hello1 {
+   width: 50%;
+  border: 15px solid burlywood;
+  background-color:cornsilk;
+}
+  
+.primary {
+  color: #330033;
+  text-align: left;
+}
+.mine {
+  color: blueviolet;
+  color:#CC0033;
+  text-align: center;
+   border: 6px solid #13e925fa;
+}
+.opp{
+  font-style:italic;
+  text-align:center;
+  color:red;
+  font-size:12px;
+
+}
+.opps{
+  font-style:italic;
+  text-align:center;
+  color:red;
+  font-size:20px;
+
+}
+.people {
+  color:rgb(red, green, blue);
+  text-align: right;
+  font-weight: bolder;
+  padding: 5px;
+  font-family: sans-serif;
+  font-style: italic;
+}
+.up{
+  text-align: center;
+  border-style: solid;
+  border-width: medium;
+  font-weight:bold;
+}
+.pour{
+  text-align:justify;
+  font-weight: bold;
+}
+.owl{
+  text-align :center;
+  background-color:mediumturquoise;
+  padding:5px
+
+}
+
+.pex1{
+  background-color:#cfc8e0;
+  min-height:  500px;
+  width:400px;
+  margin:40px auto;
+}
+ #to-do-form input{
+  background-color:rgb(27,112,137);
+  border: 0;
+  width:200px;
+  height:50px;
+  padding:0 20px;
+  font-size:18px;
+  margin:20px;
+  color:white;
+ border-radius: 5px;
+ 
+}
+#to-do-form input::placeholder{
+  color:rgba(255, 255,255, 0.5);
+}
+#to-do-form input:focus,#to-do-form button:focus{
+  outline:none;
+}
+#to-do-form button{
+  height:50px;
+  width:80px;
+  border-radius: 5px;
+  border:0;
+  background-color: rgb(202,156,24);
+  cursor: pointer;
+  font-weight:bolder;
+  color:white;
+}
+.block {
+  display:block;
+  width:100%;
+  border:none;
+  background-color:palevioletred;
+  padding:14px 28px;
+  font-size:16px;
+  cursor:pointer;
+  text-align:center;
+  font-weight:bold;
+}
+.opl{
+  text-align :center;
+  background-color:khaki;
+  padding:5px
+
+}
+
+.kool{
+  padding-bottom:25px;
+}
+
+
+.block1 {
+  display:block;
+  width:100%;
+  border:none;
+  background-color:lightgreen;
+  padding:14px 28px;
+  font-size:16px;
+  cursor:pointer;
+  text-align:center;
+  font-weight:bold;
+}
+.block2 {
+  display:block;
+  width:100%;
+  border:none;
+  background-color:gray;
+  padding:14px 28px;
+  font-size:16px;
+  cursor:pointer;
+  text-align:center;
+  font-weight:bold;
+}
+
+.ple{
+  text-align:center;
+  font-weight: bold;
+  padding-top:25px;
+}
+.kee{
+  padding-top:5px;
+  text-align:left;
+}
+.apple{
+  text-align:center;
+  font-weight: bold;
+  padding-top:25px;
+}
+
+.keep{
+  padding-top:5px;
+  text-align:center;
+}
+
+.keepl{
+  padding-top:5px;
+  text-align:right;
+}
+
