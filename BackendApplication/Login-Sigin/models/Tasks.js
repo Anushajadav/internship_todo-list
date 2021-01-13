@@ -20,8 +20,8 @@ id:{
     type:String
 },
  
-itemList:{type:Array,
-    unique:true
+itemList:{type:Array
+    
 }
 });
 module.exports = Tasks = mongoose.model("tasks",TasksSchema);

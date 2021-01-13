@@ -8,32 +8,7 @@ var passport=require('passport');
 
 const User = mongoose.model("users");
 const keys = require("./keys");
-// const opts = {};
-// //jwtFromRequest- Function that accepts a request as the only parameter and returns either the JWT as a string or null. 
-// opts.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();//reads the JWT from the http Authorization header with the scheme 'bearer':
-// //creates a new extractor that looks for the JWT in the authorization header with the scheme 'bearer'
-// opts.secretOrKey = keys.secretOrKey;
-// //is a string or buffer containing the secret (symmetric) or PEM-encoded public key
-// exports.jwtPassport = passport.use( new JwtStrategy(opts, (jwt_payload, done) => {
-//     console.log(jwt_payload + " "+"jwt_payload");
-//     User.findById(jwt_payload.id)
-//       .then(user => {
-//         if (user) {
-//           return done(null,user,{message:"Your authenticated"});
-//           console.log(user)
-//         }
-//         console.log(user)
-//         return res.status(401).send({
-//             "error": {
-//                 "code": "INVALID_AUTHORIZATION_CODE",
-//                 "message": "Invalid authorization code"
-//             }
-//         });
-         
-//       })
-//       .catch(err => console.log(err));
-      
-//   }))
+ 
 
   function isAuthenticated(req, res, next) {
     const auth=req.headers.authorization;

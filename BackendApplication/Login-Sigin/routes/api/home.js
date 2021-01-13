@@ -32,18 +32,19 @@ router.post("/accountPage",cors.cors,authenticate.verifyUser,(req,res)=>{
   let tokenid=len.substring(0,len.length-1);
    
    User.findOne({token:tokenid  }).then(user=>{
-       user.firstName= req.body.FirstName;
-          user.lastName= req.body.LastName;
-          user.email=req.body.Email;
+       user.FirstName= req.body.FirstName;
+          user.LastName= req.body.LastName;
+          user.Email=req.body.Email;
  
        
-       user.phoneNumber=req.body.Phone;
-       user.address=req.body.Address;
-       user.dob=req.body.DOB;
-       user.save().then(response=>{
-          console.log(response)
+       user.Phone=req.body.Phone;
+       user.Address=req.body.Address;
+       user.DOB=req.body.DOB;
+       user.save().then(datas=>{
+          console.log(datas);
           console.log("hi")
-          res.json({message:"saved sucessfully"});
+          res.json({message:"saved sucessfully",
+                    data:datas});
        }).catch(error=>{
           console.log("error")
           res.json(console.log(error))}
@@ -66,8 +67,8 @@ router.post("/accountPage/passwordChange",cors.cors,authenticate.verifyUser,(req
        const password=req.body.OldPassword;
         
        
-         console.log(user.password);
-       bcrypt.compare(password,user.password).then(isMatch => {
+         console.log(user.Password);
+       bcrypt.compare(password,user.Password).then(isMatch => {
          if (isMatch) {
             const password2=req.body.NewPassword;
 
@@ -75,7 +76,7 @@ router.post("/accountPage/passwordChange",cors.cors,authenticate.verifyUser,(req
            
                bcrypt.hash( password2, salt, (err, hash) => {
                  if (err) throw err;
-                 user.password = hash;
+                 user.Password = hash;
                  user
                    .save()
                    .then(user =>  {

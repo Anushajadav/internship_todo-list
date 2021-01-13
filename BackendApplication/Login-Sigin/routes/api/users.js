@@ -16,25 +16,27 @@ const cors = require('./cors');
 
  
 router.post("/register",cors.cors, (req, res) => {
-    
-  User.findOne({ email: req.body.Email }).then(user => {
+    console.log(req.body.Email);
+    console.log(req.body.Password);
+
+  User.findOne({ Email: req.body.Email }).then(user => {
       if (user) {
         return res.json({ email: "Email already exists" });
       } else {
         
         const newUser = new User({
-          firstName: req.body.FirstName,
-          lastName: req.body.LastName,
-          email: req.body.Email,
-          password: req.body.Password
+          FirstName: req.body.FirstName,
+          LastName: req.body.LastName,
+          Email: req.body.Email,
+          Password: req.body.Password
            
         });
   // Hash password before saving in database
         bcrypt.genSalt(10, (err, salt) => {
            
-          bcrypt.hash(newUser.password, salt, (err, hash) => {
+          bcrypt.hash(newUser.Password, salt, (err, hash) => {
             if (err) throw err;
-            newUser.password = hash;
+            newUser.Password = hash;
             newUser
               .save()
               .then(user =>  {
@@ -55,24 +57,27 @@ router.post("/register",cors.cors, (req, res) => {
    
 router.post("/login",cors.cors, (req, res) => {
      
-   const email = req.body.Emailid;
+   const email = req.body.Email;
    const password = req.body.Password;
 
     
   // Find user by email
-    User.findOne({ email }).then(user => {
+    User.findOne({Email: req.body.Email  }).then(user => {
       // Check if user exists
+      console.log(email);
+  console.log(password);
       if (!user) {
         return res.json({ emailnotfound: "Email not found" });
       }
   // Check password
-      bcrypt.compare(password, user.password).then(isMatch => {
+  
+      bcrypt.compare(password, user.Password).then(isMatch => {
         if (isMatch) {
           // User matched
           // Create JWT Payload
           const payload = {
             id: user.id,
-            name: user.firstName
+            name: user.FirstName
           };
   // Sign token
           jwt.sign(
@@ -90,10 +95,7 @@ router.post("/login",cors.cors, (req, res) => {
               }) )
               .catch(err => console.log(err));   
 
-               
-              
-              
-               
+    
              
             }
           );

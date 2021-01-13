@@ -131,7 +131,7 @@ router.delete("/tasks",cors.cors,authenticate.verifyUser,(req,res)=>{
  
 });
 
-//post the task
+ //post the task
 router.post("/tasks",cors.cors,authenticate.verifyUser,(req,res)=>{
    console.log(req.body);
    let len = req.headers.authorization.split(" ")[1];
@@ -156,9 +156,10 @@ router.post("/tasks",cors.cors,authenticate.verifyUser,(req,res)=>{
                console.log(err)
             }
             else{
-               res.json(todos
+               res.json({message:"saved sucessfully",
+               todo:todos});
                 
-            );
+             
             }
          })
      
@@ -172,7 +173,7 @@ router.post("/tasks",cors.cors,authenticate.verifyUser,(req,res)=>{
    });
 
 //deleat particular task
- router.delete("/tasks/:taskid",cors.cors,authenticate.verifyUser,(req,res)=>{
+ router.delete("/tasks/taskid",cors.cors,authenticate.verifyUser,(req,res)=>{
    let len = req.headers.authorization.split(" ")[1];
     let tokenid=len.substring(0,len.length-1);
      
@@ -180,7 +181,7 @@ router.post("/tasks",cors.cors,authenticate.verifyUser,(req,res)=>{
       Tasks.findOne({id:user._id}).then(resp=>{
    if(resp){
       Tasks.findByIdAndRemove(
-         { _id:req.body.Itemid },(err,doc)=>{
+         { _id:req.body.deleteid },(err,doc)=>{
             if(err){
                console.log(err);
      
@@ -274,7 +275,8 @@ router.put("/tasks/taskid",cors.cors,authenticate.verifyUser,(req,res)=>{
                            console.log(err)
                         }
                         else{
-                           res.json(todos);
+                             res.json({message:"item added sucessfully",
+               todo:todos});
                         }
                      })
                         
@@ -292,7 +294,7 @@ router.put("/tasks/taskid",cors.cors,authenticate.verifyUser,(req,res)=>{
          });
 
 //remove a item from perticular task
-   router.put("/tasks/:taskid/items",cors.cors,authenticate.verifyUser,(req,res)=>{
+   router.post("/tasks/taskid/items/delete",cors.cors,authenticate.verifyUser,(req,res)=>{
    let len = req.headers.authorization.split(" ")[1];
    let tokenid=len.substring(0,len.length-1);
      
@@ -300,8 +302,8 @@ router.put("/tasks/taskid",cors.cors,authenticate.verifyUser,(req,res)=>{
       Tasks.findOne({id:user._id}).then(resp=>{
          if(resp){
             Tasks.findByIdAndUpdate(
-               { _id:req.body.Itemid}, 
-               { $pull: { itemList:req.body.ItemList }},(err,doc)=>{
+               { _id:req.body.deleteid}, 
+               { $pull: { itemList:req.body.deleteitem }},(err,doc)=>{
                   if(err){
                      console.log(err);
            
@@ -312,9 +314,8 @@ router.put("/tasks/taskid",cors.cors,authenticate.verifyUser,(req,res)=>{
                            console.log(err)
                         }
                         else{
-                           res.json(todos
-                            
-                        );
+                           res.json({message:"item deleted sucessfully",
+                           todo:todos});
                         }
                      })
                            }
